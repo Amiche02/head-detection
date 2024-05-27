@@ -1,0 +1,14 @@
+# Utilisation de l'image de base PyTorch avec CUDA
+FROM pytorch/pytorch:1.12.0-cuda11.3-cudnn8-runtime
+
+# Installation des dépendances nécessaires
+# RUN pip3 install torch torchvision torchaudio 
+RUN pip3 install matplotlib opencv-python roboflow inference-gpu ultralytics huggingface_hub
+RUN export ROBOFLOW_API_KEY="CcDqpFkghF2iME7I4UYr"
+
+# Copie du code du modèle
+COPY FaceDetectInfo/model/ /app/model/
+WORKDIR /app/model
+
+# Commande par défaut pour lancer l'entraînement du modèle
+CMD ["python", "main.py"]
