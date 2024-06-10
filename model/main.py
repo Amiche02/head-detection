@@ -1,7 +1,7 @@
 from inference import get_model
 import supervision as sv
 import cv2
-
+ 
 image_file = "../Data/test_data/test4.jpg"
 image = cv2.imread(image_file)
 

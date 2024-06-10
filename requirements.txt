@@ -1,0 +1,7 @@
+inference
+supervision
+opencv-python
+huggingface_hub
+ultralytics
+pillow
+roboflow
